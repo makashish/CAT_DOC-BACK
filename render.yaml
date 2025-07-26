@@ -1,9 +1,9 @@
 services:
   - type: web
-    name: my-python-backend
+    name: python-backend
     env: python
-    buildCommand: ""
-    startCommand: gunicorn app:app
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn app:app"  # or whatever you use
     envVars:
       - key: PYTHON_VERSION
         value: 3.10
